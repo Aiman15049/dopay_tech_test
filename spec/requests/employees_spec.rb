@@ -1,11 +1,13 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe 'Employees API', type: :request do
   describe 'GET /employees' do
     before do
-      @first_employee = FactoryBot.create(:employee, fullname: "Bobby Jenkins",
+      @first_employee = FactoryBot.create(:employee, fullname: 'Bobby Jenkins',
                                                      identification_number: 1)
-      @second_employee = FactoryBot.create(:employee, fullname: "Jobby Benkins",
+      @second_employee = FactoryBot.create(:employee, fullname: 'Jobby Benkins',
                                                       identification_number: 2)
     end
 
