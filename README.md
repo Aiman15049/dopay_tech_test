@@ -1,24 +1,25 @@
-# README
+# DoPay tech test
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+### Getting up and running
 
-* Ruby version
+ - `$ git clone ghttps://github.com/Aiman15049/dopay_tech_test.git`
+ - `$ cd dopay_tech_test`
+ - `$ bundle`
+ - `$ rails db:seed`
+ - `$ rails server`
+ - Head to 'localhost:3000/employees' to view the 100 most recent employees in JSON
 
-* System dependencies
+### Features and how to use the app
+- Create 1000 fake Employee data and view via the index as JSON, paginated acccording to your params.
+- Uses limit and offset to paginate so adjust your urls accordingly in order to view the data however you like, for example: 'localhost:3000/employees?offset=100' will give you a page of 100 starting from the 100th point in the order (which in this case is most recent)
 
-* Configuration
+- whereas 'localhost:3000/employees?offset=200' will give you a page of 100 starting from the 200th point
 
-* Database creation
+### Running tests and linters
 
-* Database initialization
+- `$ rubocop`
+- `$ rspec`
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Nice to haves if I had more time
+- Properly implemented pagination (All the logic is there - just need to apply next / last buttons)
